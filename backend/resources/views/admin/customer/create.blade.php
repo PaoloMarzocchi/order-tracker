@@ -10,6 +10,7 @@
 
             @include('admin.customer.components._form')
 
+            {{-- Actions --}}
             <div class="mt-4">
                 <x-primary-button>{{ __('Save') }}</x-primary-button>
                 <a href="{{ route('admin.customers.index') }}" class="ml-3 text-sm text-gray-600">{{ __('Cancel') }}</a>
