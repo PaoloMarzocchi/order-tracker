@@ -43,7 +43,8 @@ class CustomerController extends Controller
      */
     public function show(Customer $customer)
     {
-        return view('admin.customer.show', compact('customer'));
+        $orders = $customer->orders()->get();
+        return view('admin.customer.show', compact('customer', 'orders'));
     }
 
     /**

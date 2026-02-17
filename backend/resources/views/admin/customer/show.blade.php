@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="p-6 max-w-2xl mx-auto">
+<div class="py-6 max-w-4xl mx-auto">
     <h1 class="text-xl font-semibold mb-4">{{ __('Customer ID: :id', ['id' => $customer->id]) }}</h1>
 
     {{-- Customer Details --}}
@@ -33,4 +33,10 @@
         </div>
     </div>
 </div>
+
+@if($orders->isNotEmpty())
+    <h2 class="p-6 text-xl font-semibold mb-4">{{ __('Customer Orders') }}</h2>
+
+    @include('admin.orders.components._orders_table', ['orders' => $orders])
+@endif
 @endsection
