@@ -6,7 +6,6 @@ use App\Http\Requests\Customer\StoreCustomerRequest;
 use App\Http\Requests\Customer\UpdateCustomerRequest;
 use App\Models\Customer;
 use Illuminate\Http\Request;
-use Symfony\Component\HttpKernel\HttpCache\Store;
 
 class CustomerController extends Controller
 {
