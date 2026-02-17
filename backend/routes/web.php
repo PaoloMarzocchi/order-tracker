@@ -22,6 +22,7 @@ Route::middleware(['auth'])
     ->prefix('admin')
     ->group(function () {
         Route::resource('customers', \App\Http\Controllers\CustomerController::class);
+        Route::resource('orders', \App\Http\Controllers\OrderController::class);
     });
 
 require __DIR__ . '/auth.php';
