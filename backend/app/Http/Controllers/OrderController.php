@@ -80,7 +80,11 @@ class OrderController extends Controller
      */
     public function destroy(Order $order)
     {
-        $order->update(['status' => OrderStatus::Cancelled->value]);
-        return redirect()->route('admin.orders.index')->with('success', 'Order deleted successfully.');
+        try {
+            $order->update(['status' => OrderStatus::Cancelled->value]);
+            return redirect()->route('admin.orders.index')->with('success', 'Order cancelled successfully.');
+        } catch (\Exception $e) {
+            return redirect()->back()->with(['error' => 'Failed to cancel order: ' . $e->getMessage()]);
+        }
     }
 }
