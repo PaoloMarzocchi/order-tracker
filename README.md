@@ -22,6 +22,12 @@ Per la parte di API Restful invece è stato utilizzato Laravel sanctum per la pr
 
 - Clonare la repository in locale
 
+- Spostarsi nella cartella `backend`
+
+```bash
+cd backend
+```
+
 - Installare le dipendenze PHP
 
 ```bash
